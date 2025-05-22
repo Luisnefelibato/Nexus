@@ -1,15 +1,18 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/',
+  server: {
+    port: 3000,
+    host: true,
+    cors: true
+  },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
     sourcemap: false,
     minify: 'terser'
   },
-  server: {
-    port: 3000,
-    host: true
+  define: {
+    // Definir variables globales si es necesario
+    __API_URL__: JSON.stringify('http://173.249.8.251:5000')
   }
 })
