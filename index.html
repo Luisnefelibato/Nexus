@@ -1,0 +1,99 @@
+
+<!doctype html>
+
+<html lang="es">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Antares Nexus - Luis</title>
+
+  </head>
+
+  <body>
+
+    <div id="app">
+
+      <!-- Header -->
+
+      <header class="header">
+
+        <div class="logo">
+
+          <div class="logo-icon"></div>
+
+          <h1>Antares Nexus</h1>
+
+        </div>
+
+        <div class="status" id="status">
+
+          <span class="status-dot" id="statusDot"></span>
+
+          <span id="statusText">Conectando...</span>
+
+        </div>
+
+      </header>
+
+      <!-- Chat Container -->
+
+      <main class="chat-container" id="chatContainer">
+
+        <div class="message assistant">
+
+          <div class="message-author">Luis</div>
+
+          <div class="message-text">Hola, soy Luis de Antares Nexus. ¿Con quién tengo el gusto de hablar?</div>
+
+        </div>
+
+      </main>
+
+      <!-- Input Area -->
+
+      <footer class="input-area">
+
+        <div class="input-group">
+
+          <input 
+
+            type="text" 
+
+            id="messageInput" 
+
+            placeholder="Escribe tu mensaje..." 
+
+            disabled
+
+          />
+
+          <button id="voiceBtn" class="btn-voice" disabled>���</button>
+
+          <button id="sendBtn" class="btn-send" disabled>Enviar</button>
+
+        </div>
+
+        <div class="controls">
+
+          <button id="modeToggle" class="btn-mode" disabled>Modo: Voz</button>
+
+          <button id="interruptBtn" class="btn-interrupt" disabled>Interrumpir</button>
+
+        </div>
+
+      </footer>
+
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+
+  </body>
+
+</html>
+
