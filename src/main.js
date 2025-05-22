@@ -3,14 +3,12 @@ import './style.css'
 // Configuración - URL de tu servidor backend en Contabo
 const SERVER_URL = 'http://173.249.8.251:5000'
 
-// Configuración para desarrollo vs producción
+// Configuración para requests
 const API_CONFIG = {
-  // En producción (Vercel) usamos tu servidor de Contabo
   baseURL: SERVER_URL,
-  // Headers adicionales para CORS
+  // Solo headers que el cliente puede enviar
   headers: {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*'
+    'Content-Type': 'application/json'
   }
 }
 
@@ -81,8 +79,7 @@ async function checkServerConnection() {
     
     const response = await fetch(`${API_CONFIG.baseURL}/api/status`, {
       method: 'GET',
-      headers: API_CONFIG.headers,
-      mode: 'cors' // Importante para CORS
+      headers: API_CONFIG.headers
     })
     
     if (response.ok) {
@@ -208,7 +205,6 @@ async function handleSendMessage() {
     const response = await fetch(`${API_CONFIG.baseURL}/api/chat`, {
       method: 'POST',
       headers: API_CONFIG.headers,
-      mode: 'cors',
       body: JSON.stringify({
         message: message,
         userName: state.userName,
@@ -290,8 +286,7 @@ async function handleInterrupt() {
   try {
     await fetch(`${API_CONFIG.baseURL}/api/interrupt`, {
       method: 'POST',
-      headers: API_CONFIG.headers,
-      mode: 'cors'
+      headers: API_CONFIG.headers
     })
   } catch (error) {
     console.error('Error al interrumpir:', error)
