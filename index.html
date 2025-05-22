@@ -337,8 +337,8 @@
     </div>
 
     <script>
-      // Configuración - URL de tu servidor backend en Contabo
-      const SERVER_URL = 'http://173.249.8.251:5000'
+      // Configuración - Usar la variable de entorno de Vercel o fallback
+      const SERVER_URL = import.meta.env.VITE_API_URL || 'http://173.249.8.251:5000'
 
       // Configuración para requests
       const API_CONFIG = {
