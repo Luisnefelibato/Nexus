@@ -1,15 +1,8 @@
 import { defineConfig } from 'vite'
 
-export default defineConfig({
-  base: '/',
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'terser'
-  },
-  server: {
-    port: 3000,
-    host: true
-  }
-})
+ export default defineConfig({
+   server: {
+     host: true,  // Esto permite tanto localhost como IP
+     port: 3000
+   }
+ })

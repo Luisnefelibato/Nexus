@@ -10,6 +10,7 @@
     "vercel-build": "vite build"
   },
   "devDependencies": {
+    "@vitejs/plugin-basic-ssl": "^1.1.0",
     "vite": "^5.0.0"
   }
 }
